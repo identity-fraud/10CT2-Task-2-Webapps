@@ -1,6 +1,12 @@
 :root {
   --text: #cdcdcd;
+  --text-secondary: #808080;
   --background: #2D2E2E;
+}
+
+::selection {
+    color: #2D2E2E;
+    background-color: #cdcdcd
 }
 
 body {
@@ -13,11 +19,11 @@ body {
 header {
     background-color: #353636;
     filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.2));
-    display: flow-root;
 }
 
 header h4 {
     display: inline-block;
+    margin: 10px 0
 }
 
 header a:link, a:visited {
@@ -30,7 +36,7 @@ header a:hover {
 }
 
 nav {
-    color: #716969;
+    color: var(--text-secondary);
     display: flex;
     float: right;
 }
@@ -45,10 +51,10 @@ nav h4 {
 }
 
 footer {
-    color: #808080;
+    color: var(--text-secondary);
     text-align: center;
 }
 
-.margin-left-10px {
-    margin-left: 10px;
+.margin-left-20px {
+    margin-left: 20px;
 }

@@ -42,3 +42,7 @@ Functional Requirements
 Non-functional requirements
 * Should load quickly (<2s)
 * Page layout should be generic or atleast easy to navigate
+
+## Researching and Planning
+PMI Table
+![webapps PMI table](images/webapps_PMI.png)

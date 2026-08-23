@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{ page.title }} - identity fraud's website</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
         <link rel="icon" type="image/png" href="assets/favicon.png">
     </head>
     <body>
@@ -28,6 +28,6 @@
             <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
             <p>© 2026 identity-fraud. Released under GPLv3</p>
         </footer>
-        <script src="script.js"></script> 
+        <script src="{{ '/script.js' | relative_url }}"></script>
     </body>
 </html>

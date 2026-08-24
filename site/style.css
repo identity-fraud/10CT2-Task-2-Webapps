@@ -42,7 +42,7 @@ nav {
     float: right;
 }
 
-nav h4 {
+nav h4, img {
     margin-right: 20px;
     font-weight: normal;
 }
@@ -62,4 +62,13 @@ footer {
 
 .margin-left-20px {
     margin-left: 20px;
+}
+
+.goback {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.goback img {
+    filter: invert(1);
 }

@@ -1,5 +1,5 @@
 # 10CT2 Task 2 Web Apps - Project Documentation
-
+The website is hosted by Github Pages using Jekyll https://identity-fraud.github.io/10CT2-Task-2-Webapps
 ## Identifying and Defining
 Divergent Mindmaps on Excalidraw
 
@@ -30,7 +30,7 @@ In my web ideas I visualised in the impact/effort matrix, the blog, screen time 
 ## Functional and Non-functional Requirements
 Purpose
 
-The website will be a blog designed in showing various posts from it, which can be informational or helpful. It is intended to engage with similar thinking computing technology students.
+The website will be a blog designed in showing various posts from it, which can be informational or helpful. It is intended to engage with similar thinking computing technology students. 
 
 Functional Requirements
 * The user should be able to view different posts in the blog
@@ -38,6 +38,7 @@ Functional Requirements
 * Navigation pages for the primary github repository and copyright notice are necessary
 * Support RSS live feed
 * Main landing page for general information of the website
+* Trustworthy information with cited sources
 
 Non-functional requirements
 * Should load quickly (<2s)

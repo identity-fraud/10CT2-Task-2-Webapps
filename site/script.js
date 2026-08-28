@@ -9,12 +9,17 @@ searchForm.addEventListener('submit', (event) => {
 });
 
 function darkLightMode() {
-  const darklight = document.getElementById("darklight").src
-  if (darklight.includes('moon')) {
-    document.getElementById("darklight").src = "assets/brightness-high-fill.svg"
+  const icon = document.getElementById("darklight");
+  const btn = document.querySelector(".darkLightModeBtn");
+  const html = document.documentElement;
 
-  }
-  else {
-    alert('dark')
+  if (icon.src.includes('moon')) {
+    icon.src = icon.dataset.srcLight;
+    html.style.setProperty('color-scheme', 'light');
+    btn.style.filter = "invert(0.2)";
+  } else {
+    icon.src = icon.dataset.srcDark;
+    html.style.setProperty('color-scheme', 'dark');
+    btn.style.filter = "invert(0.8)";
   }
 }

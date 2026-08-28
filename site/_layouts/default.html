@@ -11,7 +11,7 @@
         <header>
             <h4 class="margin-left-20px">website name</h4>
             <nav>
-                <img id='darklight' class="darkLightModeBtn" src="{{ '/assets/moon-stars-fill.svg' | relative_url }}" data-src-dark="{{ '/assets/moon-stars-fill.svg' | relative_url }}" data-src-light="{{ '/assets/brightness-high-fill.svg' | relative_url }}" onclick="darkLightMode()">
+                <img id='darklight' class="darkLightModeBtn" src="{{ '/assets/moon-stars-fill.svg' | relative_url }}" data-src-dark="{{ '/assets/moon-stars-fill.svg' | relative_url }}" data-src-light="{{ '/assets/brightness-high-fill.svg' | relative_url }}" onclick="darkLightMode()" onload="checkDarkLightMode()">
                 
                 <h4>|</h4>
                 <h4><a href="/index">Home</a></h4>
@@ -22,14 +22,16 @@
             </nav>
         </header>
         <main>
-            <h1>{{ page.title }}</h1>
-            {{ content }}
+            <section>
+                {{ content }}
+            </section>
         </main>
         </div>
         <footer>
+            <hr>
+            <p>© 2026 identity-fraud. Released under GPLv3. Hosted with Github Pages & Jekyll. Certain icons from Bootstrap</p>
             <div id="wcb" class="carbonbadge wcb-d"></div>
             <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
-            <p>© 2026 identity-fraud. Released under GPLv3. Hosted with Github Pages & Jekyll.</p>
         </footer>
         <script src="{{ '/script.js' | relative_url }}"></script>
     </body>

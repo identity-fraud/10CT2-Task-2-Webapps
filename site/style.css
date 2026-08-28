@@ -62,12 +62,15 @@ nav a:link, nav a:visited {
 }
 
 main {
-    margin-left: 40px;
+    margin-left: 240px;
+    margin-right: 240px;
 }
 
 footer {
     color: var(--text-secondary);
     text-align: center;
+    margin-left: 240px;
+    margin-right: 240px;
 }
 
 .margin-left-20px {

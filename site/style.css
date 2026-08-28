@@ -1,13 +1,15 @@
 :root {
-  --text: #cdcdcd;
-  --text-secondary: #808080;
-  --background: #2D2E2E;
-  --accent: #4ade80;
+    color-scheme: light dark;   
+    --text: light-dark(#323232, #cdcdcd);
+    --text-secondary: light-dark(#7F7F7F, #808080);
+    --header-background: light-dark(#CAC9C9, #353636);
+    --background: light-dark(#D2D1D1, #2D2E2E);
+    --accent: light-dark(#b5217f, #4ade80);
 }
 
 ::selection {
-    color: #2D2E2E;
-    background-color: #cdcdcd;
+    color: light-dark(#cdcdcd, #2D2E2E);
+    background-color: light-dark(#2D2E2E, #cdcdcd);
 }
 
 body {
@@ -27,7 +29,7 @@ a:hover {
 }
 
 header {
-    background-color: #353636;
+    background-color: var(--header-background);
     filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.2));
 }
 
@@ -52,7 +54,7 @@ nav a:link, nav a:visited {
 }
 
 .darkLightModeBtn {
-    filter: invert(0.8)
+    filter: invert(0.8);
 }
 
 .darkLightModeBtn:hover {

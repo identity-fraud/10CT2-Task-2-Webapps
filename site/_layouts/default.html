@@ -5,17 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{ page.title }} - website name</title>
         <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
-        <link rel="icon" type="image/png" href="assets/favicon.png">
+        <link rel="icon" type="image/png" href="{{ '/assets/favicon.png' | relative_url }}">
     </head>
     <body>
         <header>
             <h4 class="margin-left-20px">website name</h4>
             <nav>
-                <img id='darklight' class="darkLightModeBtn" src="assets/moon-stars-fill.svg" onclick="darkLightMode()">
+                <img id='darklight' class="darkLightModeBtn" src="{{ '/assets/moon-stars-fill.svg' | relative_url }}" data-src-dark="{{ '/assets/moon-stars-fill.svg' | relative_url }}" data-src-light="{{ '/assets/brightness-high-fill.svg' | relative_url }}" onclick="darkLightMode()">
+                
                 <h4>|</h4>
-                <h4><a href="index">Home</a></h4>
+                <h4><a href="/index">Home</a></h4>
                 <h4>|</h4>
-                <h4><a href="blog">Blog</a></h4>
+                <h4><a href="/blog">Blog</a></h4>
                 <h4>|</h4>
                 <h4><a href="https://github.com/identity-fraud/10CT2-Task-2-Webapps">Github</a></h4>
             </nav>
@@ -28,7 +29,7 @@
         <footer>
             <div id="wcb" class="carbonbadge wcb-d"></div>
             <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
-            <p>© 2026 identity-fraud. Released under GPLv3</p>
+            <p>© 2026 identity-fraud. Released under GPLv3. Hosted with Github Pages & Jekyll.</p>
         </footer>
         <script src="{{ '/script.js' | relative_url }}"></script>
     </body>

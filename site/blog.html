@@ -8,4 +8,11 @@ title: Blog
     <button type="search">Search</button>
 </form>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean finibus est sit amet lectus fermentum, ac pretium eros rhoncus. Ut ante est, ullamcorper id odio non, bibendum vehicula nibh. Duis suscipit nibh eu pellentesque sagittis. Nunc vestibulum nunc quis vehicula aliquam. Integer efficitur condimentum neque, vel iaculis ligula sodales at. Proin pretium pretium posuere. Sed congue sit amet lectus nec rutrum. Integer pharetra nibh ante. Cras quis gravida lectus. Pellentesque ultricies ex in scelerisque tincidunt. Etiam sed nulla sit amet nunc molestie dignissim. Integer quis aliquet quam.
-<a href="{% post_url 2026-08-17-How-to-make-a-blog %}">s</a>
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>

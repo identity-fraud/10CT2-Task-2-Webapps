@@ -33,3 +33,5 @@ function darkLightMode() {
     sessionStorage.setItem("theme", "dark")
   }
 }
+
+window.addEventListener('DOMContentLoaded', checkDarkLightMode);

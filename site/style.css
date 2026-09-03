@@ -5,6 +5,7 @@
     --header-background: light-dark(#CAC9C9, #353636);
     --background: light-dark(#D2D1D1, #2D2E2E);
     --accent: light-dark(#b5217f, #4ade80);
+    --icon-invert: light-dark(0%, 100%);
 }
 
 ::selection {
@@ -17,6 +18,10 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: var(--text);
     margin: 0px;
+}
+
+i {
+    color: var(--text-secondary);
 }
 
 a:link, a:visited {
@@ -62,8 +67,14 @@ nav a:link, nav a:visited {
 }
 
 main {
-    margin-left: 240px;
-    margin-right: 240px;
+    font-size: 21px;
+    margin-left: 21rem;
+    margin-right: 21rem;
+    line-height: 1.75rem;
+}
+
+.main-post {
+    display: block;
 }
 
 footer {
@@ -71,6 +82,13 @@ footer {
     text-align: center;
     margin-left: 240px;
     margin-right: 240px;
+}
+
+footer hr {
+    margin-top: 1rem;
+    background-color: var(--text-secondary);
+    height: 2px;
+    border: none;
 }
 
 .margin-left-20px {
@@ -83,5 +101,5 @@ footer {
 }
 
 .goback img {
-    filter: invert(1);
+    filter: invert(var(--icon-invert));
 }

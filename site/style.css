@@ -38,10 +38,11 @@ header {
     background-color: var(--header-background);
     filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.2));
     transition: background-color 0.2s;
+    align-items: center;
+    display: flex;
 }
 
 header h4 {
-    display: inline-block;
     margin: 10px 0
 }
 

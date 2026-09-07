@@ -54,3 +54,9 @@ The website will be a blog designed in showing various posts from it, which can 
 | Our World In Data  | Large collection of data about any ongoing events. Easy to understand visualisations of the data through charts and graphs, along with added context or information in posts.  | The data could be skewed or indirectly biased.                                                                                       | Our World In Data gathers data from multiple sources, which could lead to duplicate or incorrect data shown in visualisations, the data itself could be biased in many ways as they were from a third party.                                                    |
 
 ### Secondary Research
+I am trying to influence people to use a more trustworthy source for their information, rather than using AI or social media. 
+
+Sources: <br>
+Emily Denniss, Rebecca Lindberg, Social media and the spread of misinformation: infectious and a threat to public health, Health Promotion International, Volume 40, Issue 2, April 2025, daaf023, https://doi.org/10.1093/heapro/daaf023 (Oxford Academics Journal Article)
+
+Social media contributes significantly to the spread of misinformation globally. This is due the speed social platforms allow users to publish about anything, regardless of their qualifications or knowledge. Misinformation is also favoured by algorithms as they garner higher engagement.

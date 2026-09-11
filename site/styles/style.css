@@ -1,3 +1,6 @@
+---
+---
+
 :root {
     color-scheme: light dark;   
     --text: light-dark(#323232, #cdcdcd);
@@ -5,6 +8,15 @@
     --header-background: light-dark(#CAC9C9, #353636);
     --background: light-dark(#D2D1D1, #2D2E2E);
     --accent: light-dark(#b5217f, #4ade80);
+    --icon-url: url({{ 'assets/moon.svg' | relative_url }})
+}
+
+:root[style*="color-scheme: dark"] {
+  --icon-url: url({{ 'assets/moon.svg' | relative_url }});
+}
+
+:root[style*="color-scheme: light"] {
+  --icon-url: url({{ 'assets/sun.svg' | relative_url }});
 }
 
 ::selection {
@@ -42,7 +54,7 @@ header {
 
 header h4 {
     display: inline-block;
-    margin: 10px 0
+    margin: 10px;
 }
 
 nav {
@@ -51,21 +63,24 @@ nav {
     float: right;
 }
 
-nav h4, img {
-    margin-right: 20px;
-    font-weight: normal;
-}
-
 nav a:link, nav a:visited {
     color: var(--text);
 }
 
-.darkLightModeBtn {
-    filter: invert(0.8);
+#theme-toggle {
+    padding: 10px;
+	background: none;
+	border: none;
+	cursor: pointer;
 }
 
-.darkLightModeBtn:hover {
-    cursor: pointer;
+.theme-icon {
+	background-image: var(--icon-url);
+	display: inline-block;
+    vertical-align: middle; 
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
 }
 
 main {
@@ -73,10 +88,6 @@ main {
     margin-left: 24rem;
     margin-right: 24rem;
     line-height: 1.75rem;
-}
-
-.main-post {
-    display: block;
 }
 
 footer {
@@ -91,16 +102,4 @@ footer hr {
     background-color: var(--text-secondary);
     height: 2px;
     border: none;
-}
-
-.margin-left-20px {
-    margin-left: 20px;
-}
-
-.goback {
-    display: inline-block;
-    margin-top: 20px;
-}
-
-.goback img {
 }

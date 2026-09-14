@@ -5,12 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{ page.title }} - website name</title>
         <link rel="stylesheet" href="{{ 'styles/style.css' | relative_url }}">
-        <link rel="icon" type="image/png" href="{{ 'assets/favicon.png' | relative_url }}">
+        <link rel="icon" type="image/x-icon" href="{{ 'assets/favicon.ico' | relative_url }}">
+        <script>
+            const savedScheme = localStorage.getItem('color-scheme');
+			if (savedScheme) {document.documentElement.style.colorScheme = savedScheme;}
+        </script>
     </head>
     <body>
         <header>
             <h4><a href="{{ 'index.html' | relative_url }}">website name</a></h4>
             <nav>
+                <h4><a href="https://github.com/identity-fraud/10CT2-Task-2-Webapps">Github</a></h4>
+                <h4>|</h4>
                 <h4><a href="{{ 'pages/blog.html' | relative_url }}">Blog</a></h4>
                 <h4>|</h4>
                 <button id="theme-toggle">
@@ -18,6 +24,13 @@
                 </button>
             </nav>
         </header>
+        <main>
+            {{ content }}
+        </main>
+        <footer>
+            <hr>
+            <p>© identity-fraud. All Rights Reserved. Certain icons from Bootstrap. Hosted with Github Pages</p>
+        </footer>
     <script src="{{ 'scripts/script.js' | relative_url }}"></script>
     </body>
 </html>

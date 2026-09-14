@@ -1,7 +1,7 @@
 # 10CT2 Task 2 Web Apps - Project Documentation
 The website is hosted by Github Pages using Jekyll https://identity-fraud.github.io/10CT2-Task-2-Webapps
 
-run ``bundle exec jekyll serve`` with jekyll installed to run 
+run ``bundle exec jekyll serve`` with jekyll installed to run locally
 ## Identifying and Defining
 Divergent Mindmaps on Excalidraw
 

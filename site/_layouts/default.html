@@ -4,12 +4,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{ page.title }} - website name</title>
-        <link rel="stylesheet" href="{{ 'styles/style.css' | relative_url }}">
+        <link rel="stylesheet" href="{{ 'styles/style.css' | relative_url }}"> <!-- relative urls because nested file -->
         <link rel="icon" type="image/x-icon" href="{{ 'assets/favicon.ico' | relative_url }}">
-        <script>
+        <script> 
             const savedScheme = localStorage.getItem('color-scheme');
 			if (savedScheme) {document.documentElement.style.colorScheme = savedScheme;}
-        </script>
+        </script> <!-- save current colour scheme to localstorage -->
     </head>
     <body>
         <header>
@@ -25,12 +25,12 @@
             </nav>
         </header>
         <main>
-            {{ content }}
+            {{ content }} <!-- main content from liquid -->
         </main>
         <footer>
             <hr>
             <p>© identity-fraud. All Rights Reserved. Certain icons from Bootstrap. Hosted with Github Pages</p>
         </footer>
-    <script src="{{ 'scripts/script.js' | relative_url }}"></script>
+    <script src="{{ 'scripts/script.js' | relative_url }}"></script> <!-- tag is at the bottom, makes it the same as the defer tag -->
     </body>
 </html>

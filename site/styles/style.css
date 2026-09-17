@@ -1,18 +1,20 @@
 ---
+
 ---
+/* ^ for liquid tags */
 
 :root {
-    color-scheme: light dark;   
-    --text: light-dark(#323232, #cdcdcd);
+    color-scheme: light dark; /* two palletes for light dark colour scheme toggle */
+    --text: light-dark(#323232, #cdcdcd); /* use variables to define each theme */
     --text-secondary: light-dark(#7F7F7F, #808080);
     --header-background: light-dark(#CAC9C9, #353636);
     --background: light-dark(#D2D1D1, #2D2E2E);
     --accent: light-dark(#b5217f, #4ade80);
-    --icon-url: url({{ 'assets/moon.svg' | relative_url }})
+    --icon-url: url({{ 'assets/moon.svg' | relative_url }}) /* relative urls because nested file */
 }
 
 :root[style*="color-scheme: dark"] {
-  --icon-url: url({{ 'assets/moon.svg' | relative_url }});
+  --icon-url: url({{ 'assets/moon.svg' | relative_url }}); /* switch image to the opposite colour */
 }
 
 :root[style*="color-scheme: light"] {
@@ -30,7 +32,7 @@ body {
     color: var(--text);
     margin: 0px;
     padding: 0px;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s; /* theme toggle transition */
 }
 
 i {

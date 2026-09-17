@@ -8,4 +8,4 @@ toggleBtn.addEventListener('click', () => {
   root.style.colorScheme = nextScheme;
   
   localStorage.setItem('color-scheme', nextScheme);
-});
+}); // listen to onclick theme toggle button to switch themes

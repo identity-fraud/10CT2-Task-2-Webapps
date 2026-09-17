@@ -59,8 +59,15 @@ The website will be a blog designed in showing various posts from it, which can 
 I am trying to influence people to use a more trustworthy source for their information, rather than using AI or social media. 
 
 Sources: <br>
-Emily Denniss, Rebecca Lindberg, Social media and the spread of misinformation: infectious and a threat to public health, Health Promotion International, Volume 40, Issue 2, April 2025, daaf023, https://doi.org/10.1093/heapro/daaf023 (Oxford Academics Journal Article)
+Emily Denniss, Rebecca Lindberg, Social media and the spread of misinformation: infectious and a threat to public health, Health Promotion International, Volume 40, Issue 2, April 2025, daaf023, https://doi.org/10.1093/heapro/daaf023 (Oxford Academics Journal)
+
+Germani F, Spitale G, Biller-Andorno N. The Dual Nature of AI in Information Dissemination: Ethical Considerations. JMIR AI. 2024 Oct 15;3:e53505. doi: 10.2196/53505. PMID: 39405099; PMCID: PMC11522648. https://pmc.ncbi.nlm.nih.gov/articles/PMC11522648 (PubMed Central NIH)
 
 Social media contributes significantly to the spread of misinformation globally. This is due the speed social platforms allow users to publish about anything, regardless of their qualifications or knowledge. Misinformation is also favoured by algorithms as they garner higher engagement. This can result in public health issues as people are misinformed into taking or not taking health products and a loss of trust with experts as people grow dependant on social media
 
+The use of artificial intelligence has also contributed to the rise of misinformation. AI systems are designed to appease the user, meaning it may choose to knowingly give misinformation (or "disinformation" for intentional misinformation) to please the user in the short term. Due to the fact that these systems will always generate seemingly correct and confident responses, there are many potential risks in using AI for information. Influencer and politicians may be misinformed by the AI and continues a cycle of misinformation.
 
+This is why creating a blog containing truthful information is extremely influential in this time as it will provide more human and reliable information than AI (this depends on the person making the blogs though). 
+
+### Primary Research
+https://docs.google.com/forms/d/1iIZJgCSlY0kh8XR4F1NEqo187xSRtPMmYbJ4VKfFhIc/edit

@@ -3,8 +3,10 @@ The website is hosted by Github Pages using Jekyll https://identity-fraud.github
 
 run ``bundle exec jekyll serve`` with jekyll installed to run locally
 
+note that website name is in fact the website name and is not a placeholder (neither is the favicon)
+
 hidden things: 
-* the blog post search actually in fact does work
+* the blog post search actually in fact does work and uses some complex javascript
 * tags that appear at the top of posts are intended to immediately search the tag when clicked on (doesn't work)
 * 404 page used when in a nonexistant page
 * you may not have noticed but the highlight colour is set inversed (but manually) meaning changing themes also switches highlight theme
@@ -76,7 +78,34 @@ The use of artificial intelligence has also contributed to the rise of misinform
 This is why creating a blog containing truthful information is extremely influential in this time as it will provide more human and reliable information than AI (this depends on the person making the blogs though). 
 
 ### Primary Research
-https://docs.google.com/forms/d/1iIZJgCSlY0kh8XR4F1NEqo187xSRtPMmYbJ4VKfFhIc/edit
+Form link: https://forms.gle/GK2mPFjgMkK4WZsE9
+6 responses for 8 questions (short form responses were optional) and anonymised 
+
+Question 1
+![Primary Research form question 1](images/form-q1.png)
+
+Question 2
+![Primary Research form question 2](images/form-q2.png)
+
+Question 3
+![Primary Research form question 3](images/form-q3.png)
+
+Question 4
+![Primary Research form question 4](images/form-q4.png)
+
+Question 5
+![Primary Research form question 5](images/form-q5.png)
+
+Question 6
+![Primary Research form question 6](images/form-q6.png)
+
+Question 7
+![Primary Research form question 7](images/form-q7.png)
+
+Question 8
+![Primary Research form question 8](images/form-q8.png)
+
+These responses show that AI and social media misinformation is a major issue in society and many people still choose to trust AI and such. This does slightly impact my project as I did not realise that this much people use AI this much without checking its sources or if its information is correct. This means I will probably try to push for sources to be more clear in my blog posts as to prove its accuracy compared to the AI and change people into confirming if the information they see online is correct.
 
 ### UI/UX Design
 Homepage wireframe
@@ -96,4 +125,28 @@ I have a prototype at https://identity-fraud.github.io/10CT2-webapps/ which was 
 ![prototype image](images/prototype.png)
 
 ## Producing and Implementing
-The documenting part starts now (20/09 12:42 AM). In the beginning, I already decided I will not be using Flask as Github Pages does not support it due to being a static server provider. I was considering between using Astro or Jekyll as the site generator and decided on Jekyll due to it being built into Github Pages as an action.  This means I will be using Javascript for "backend" which will not be easy as I have not learnt it yet. I took many ideas from my earlier websites such as the typical navigation header and footer.
+The documenting part starts now (20/09 12:42 AM). When I decided on making a blog for my influential webapp, I was largely inspired by Miguel's website (miguelgrinberg.com) and the colour scheme is very similar. In the beginning, I already decided I will not be using Flask as Github Pages does not support it due to being a static server provider. I was considering between using Astro or Jekyll as the site generator and decided on Jekyll due to it being built into Github Pages as a Github action and it being much more simpler. This means I will be using Javascript for "backend" which will not be easy as I have not learnt it yet. I took many ideas from my earlier websites such as the typical navigation header and footer. My first roadblock was when I attempted installing and running Jekyll through Github Pages after I already created my website and with a nested folder (/site), this subsequently broke the runner and I chose to restart on a completely new repository even though this issue could've been solved by editing the .github/workflows/jekyll-gh-pages.yml Github Pages config. At this stage I had a simple header, footer, website icon and a few pages but there was yet to be any posts yet or a search function. I then did a redesign on the project structure to make it cleaner I guess and modulised every major file (e.g main style.css split into style.css and post.css in the styles/ folder) and then I started learning Javascript to create a theme toggle button. In the beginning I chose to use data-theme to store and switch colours from light to dark mode with very simple Javascript but the issue arose where my input box for searching did not switch colours, and originally I chose to avoid Javascript as much as possible which caused an issue with my dark icons being unable to be swapped. I solved this by using color-scheme: light dark which is not the best practice but allowed me setting paths to different svgs meaning icons were swapped with the corresponding themed icon to match the theme. I then went into another issue where my site refused working due to having nested folders everywhere, I solved this by using relative paths forcing Jekyll to look 1 folder up to find any referencing files. The most difficult part was making the search function using Javascript, I decided against using a third party extension like jekyll-search to do this for me and chose to do it purely in Javascript to fulfill the project. Using a combination of Liquid tags and Javascript I was able to make a method where I can pull the data generated from a liquid tag for loop listing the metadata/front matter of every post (in _posts) and then used Javascript to handle it and display the corresponding data like date and summary, and grabbed the input text search button for queries and used it to match with other posts and displays any that do match.
+
+## Testing and Evaluating
+### Peer Evaluation
+
+Critieria: UX, Aesthetics, Accuracy, Influence. Out of 10 each
+
+UX: 9/10
+Very user-friendly and easy to navigate. Layout is not confusing at all and anyone could understand it. The functionality of searching posts will be very useful once the quantity of posts becomes unwieldy. The blog posts are clearly dated and even have a description for more information. Only thing I don't understand is how the tags work/what they even do.
+
+Aesthetics: 8/10
+Incredibly sleek and modern design, which is simple without being basic. The transition between light and dark mode is nice. The search bar on the blog looks out of place and could be stylised. The grey background and magenta accent in light mode is quite ugly compared the dark mode colour scheme, but who uses light mode anyway.
+
+Accuracy: 6/10
+Being a personal blog, there is potential for biased or inaccurate information. On the one (real) blog post, the information seems to be accurate but lacks any credits or sources for the information. Is the user supposed to blindly trust everything you post?
+
+Influence: 6/10
+AI misinformation can be a problem, so a trustworthy source of information free of AI is valuable. However, as previously stated, the blog is not entirely trustworthy, and only contains topics which you decide to post about. If a user wants to find trustworthy information on a topic which you haven't posted about, they are better off just searchng google and ignoring/removing the AI overview.
+-by F.M
+
+Their website is very well made and I can see that a lot of time has been put into it. The website is very aesthetically pleasing, containing a very relaxed programmy feel to it and all the buttons are nice and feel smooth to click. The blog as a whole is very functional and informative and teaches me a lot about Jekyll and the navigation points are also very obvious, highlighted with a fitting green. The entire website is easy to navigate and has multiple accessibility options such as changing from dark to light mode. The base blog has correct and logical information and can be an effective way to learn but it is held back by its minimal procedures and single created strand from the blog. But overall the website scores well within all of its criteria of aesthetics UX and functionality.
+-by A.R
+
+### Project Evaluation
+I have realised now that a blog has no influence if there is nothing influential within it. Even though this project proves my programming capabilities knowledge I learnt, this does not exactly align with the purpose of this project, which is to make an influential web app. Obviously if I had more than 1 useful blog post it would be far more influence but even then it is strictly limited to what I already understand making its influence narrow. It did though meet most of my functional and non-functional requirements except for copyright disclosure and RSS feed, reasons where that I decided to use ARR (all rights reserved) to prevent using both a software license and Creative Commons license, as they each serve different purposes (software licenses only cover software aspects and CC licenses only cover media/texts) which a dual license method would be required for the blog which would be complicated. The RSS feed would also have required using an external Jekyll plugin which seems kind of cheating. I think my project management has been very good excluding the part where I restarted on a new Github repository as the old one broke when I attempted to install Jekyll ontop. Its impact on the target market would not be very large as there are thousands of other blogs out there which many probably having more influential information and better websites than mine, but it still has an impact after all and I may in fact expand this after this assessment. The website itself excelled in its UX and aesthetics (from my peer evaluation) and I think I am happy with that regardless of its influence.

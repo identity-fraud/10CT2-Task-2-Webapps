@@ -14,7 +14,7 @@
 }
 
 :root[style*="color-scheme: dark"] {
-  --icon-url: url({{ 'assets/moon.svg' | relative_url }}); /* switch image to the opposite colour */
+  --icon-url: url({{ 'assets/moon.svg' | relative_url }}); /* switch image to the corresponding one for the theme */
 }
 
 :root[style*="color-scheme: light"] {
@@ -42,7 +42,7 @@ i {
 a:link, a:visited {
     color: var(--accent);
     text-decoration: none;
-}
+} /* underline links only on hover */
 
 a:hover {
     text-decoration: underline;
@@ -74,7 +74,7 @@ nav {
 }
 
 .theme-icon {
-	background-image: var(--icon-url);
+	background-image: var(--icon-url); /* background-image allows replacing the path using variables, easier than replacing with javascript */
 	display: inline-block;
     vertical-align: middle; 
 	background-repeat: no-repeat;

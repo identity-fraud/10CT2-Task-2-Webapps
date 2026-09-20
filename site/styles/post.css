@@ -1,0 +1,39 @@
+---
+---
+
+:root {
+    color-scheme: light dark;  
+    --goback-url: url({{ 'assets/backarrow-white.svg' | relative_url }}); /* same reason for icon url in style.css */
+}
+
+:root[style*="color-scheme: dark"] {
+    --goback-url: url({{ 'assets/backarrow-white.svg' | relative_url }});
+}
+
+:root[style*="color-scheme: light"] {
+    --goback-url: url({{ 'assets/backarrow-black.svg' | relative_url }});
+}
+
+.goback-icon {
+    background-image: var(--goback-url);
+	display: inline-block;
+    vertical-align: middle; 
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
+}
+
+.tags {
+    --text: light-dark(#cdcdcd, #323232); /* reversed */
+    display: inline-block; 
+    padding: 0 3px; 
+    background-color: var(--accent); 
+    color: var(--text); 
+    border-radius: 5px;
+}
+
+pre {
+    background-color: var(--header-background);
+    padding: 1rem;
+    border-radius: 1rem;
+}

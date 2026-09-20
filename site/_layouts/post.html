@@ -1,7 +1,8 @@
 ---
 layout: default
 ---
-<link rel="stylesheet" href="{{ 'styles/blog.css' | relative_url }}">
+
+<link rel="stylesheet" href="{{ 'styles/post.css' | relative_url }}">
 <div class="goback">
     <a href="{{ 'pages/blog' | relative_url }}">
         <span class="goback-icon"></span>
@@ -9,10 +10,13 @@ layout: default
     </a>
 </div>
 <h1>{{ page.title }}</h1>
+
 <div class="tag-list">
     Tags:
-    {% for tag in site.tags %}
-    <a><p style="display: inline; padding: 3px; background-color: var(--accent); color: #323232; border-radius: 5px">{{ tag[0] }}</p></a>
+    {% for tag in page.tags %}
+        <a href="{{ 'pages/blog' | relative_url }}?q={{ tag | url_encode }}">
+            <span class="tags">{{ tag }}</span>
+        </a>
     {% endfor %}
 </div>
 <br>

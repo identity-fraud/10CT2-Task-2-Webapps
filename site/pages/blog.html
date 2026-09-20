@@ -4,18 +4,30 @@ title: Blog
 ---
 <h1>{{ page.title }}</h1>
 <search>
-  <form id="blog-search">
-    <input type="search" id="searchForm" placeholder="">
-    <button type="search">Search</button>
+  <form id="blog-search" onsubmit="event.preventDefault();">
+    <input type="search" id="searchForm" placeholder="Search posts...">
+    <button type="submit">Search</button>
   </form>
 </search>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean finibus est sit amet lectus fermentum, ac pretium eros rhoncus. Ut ante est, ullamcorper id odio non, bibendum vehicula nibh. Duis suscipit nibh eu pellentesque sagittis. Nunc vestibulum nunc quis vehicula aliquam. Integer efficitur condimentum neque, vel iaculis ligula sodales at. Proin pretium pretium posuere. Sed congue sit amet lectus nec rutrum. Integer pharetra nibh ante. Cras quis gravida lectus. Pellentesque ultricies ex in scelerisque tincidunt. Etiam sed nulla sit amet nunc molestie dignissim. Integer quis aliquet quam.
+<p>List of posts:</p>
 
-<ul>
+<ul id="post-list">
   {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
+    <li 
+      class="post-item"
+      data-title="{{ post.title | escape }}"
+      data-categories="{{ post.categories | join: ' ' | downcase }}"
+      data-content="{{ post.summary | escape }}"
+    > <!-- using html data tag to show Javascript every posts metadata -->
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
+    {% if post.summary %}
+      <p class="post-excerpt">{{ post.summary }}</p>
+    {% endif %}
+  </li>
   {% endfor %}
 </ul>
 
+<p id="no-results" style="display: none;">No matching posts found.</p>
+
+<script src="{{ 'scripts/search.js' | relative_url }}"></script>

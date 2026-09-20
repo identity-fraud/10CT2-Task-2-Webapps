@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const queryParam = urlParams.get('q');
         if (queryParam) {
             searchInput.value = queryParam;
-            filterPosts(); // stolen from stackoverflow https://stackoverflow.com/questions/9870512/how-to-obtain-the-query-string-from-the-current-url-with-javascript
+            filterPosts();
 }
     });
 }

@@ -1,1 +1,2 @@
-source: site
+source: site # why are you reading this, Jekyll uses this to find where the site begins
+permalink: pretty # removes file extensions from website links (might break things)

@@ -17,60 +17,63 @@ tags: Blogging Tutorial
     <h3>1. Install Prerequisites & Jekyll</h3>
     Before creating a Jekyll site, you need Ruby and RubyGems installed on your system. Run these commands in your terminal:
     <pre><code>
-        # Check if Ruby is installed
-        ruby -v
-        # Install Jekyll and Bundler gems
-        gem install jekyll bundler
+# Check if Ruby is installed
+ruby -v
+# Install Jekyll and Bundler gems
+gem install jekyll bundler
     </code></pre>
     <h3>2. Create Your Local Jekyll Site</h3>
     Create a new site structure and launch the local server:
     <pre><code>
-        # Create a new Jekyll site skeleton
-        jekyll new my-blog
-        # Navigate into your project folder
-        cd my-blog
-        # Start the local server
-        bundle exec jekyll serve
+# Create a new Jekyll site skeleton
+jekyll new my-blog
+# Navigate into your project folder
+cd my-blog
+# Start the local server
+bundle exec jekyll serve
     </code></pre>
     Open your browser and navigate to <code>http://localhost:4000</code> to view your running site.
 
     <h3>3. Create a Base Post Layout</h3>
     Create a file at <code>_layouts/post.html</code> to define how individual blog posts render:
     <pre><code>
-        ---
-        layout: default
-        ---
-        &lt;article class="post"&gt;
-        &lt;h1&gt;{{ page.title }}&lt;/h1&gt;
-        &lt;p class="post-date"&gt;{{ page.date | date: "%B %d, %Y" }}&lt;/p&gt;
-        
-        &lt;div class="post-body"&gt;
-        {{ content }}
-        &lt;/div&gt;
-        &lt;/article&gt;
+---
+layout: default
+---
+&lt;article class="post"&gt;
+&lt;h1&gt;{{ page.title }}&lt;/h1&gt;
+&lt;p class="post-date"&gt;{{ page.date | date: "%B %d, %Y" }}&lt;/p&gt;
+
+&lt;div class="post-body"&gt;
+{{ content }}
+&lt;/div&gt;
+&lt;/article&gt;
     </code></pre>
 
     <h3>4. Write Your First Blog Post</h3>
     Create a new file in the <code>_posts</code> directory. Jekyll requires post filenames to follow the strict <code>YYYY-MM-DD-title.md</code> naming convention (e.g. <code>_posts/2026-09-20-my-first-post.md</code>):
     <pre><code>
-        ---
-        layout: post
-        title: "My First Blog Post"
-        summary: "Summary of my first blog post"
-        tags: tagthings
-        ---
-        this post was generated using jekyll
+---
+layout: post
+title: "My First Blog Post"
+summary: "Summary of my first blog post"
+tags: tagthings
+---
+this post was generated using jekyll
     </code></pre>
 
     <h3>5. Setup GitHub Repository & Deploy</h3>
     Create a public repository on GitHub named <code>your-username.github.io</code>. Initialize Git in your project directory, commit your files, and push to GitHub:
     <pre><code>
-        git init
-        git add .
-        git commit -m "Setup Jekyll"
-        git branch -M main
-        git remote add origin username.github.io.git
-        git push -u origin main
+git init
+git add .
+git commit -m "Setup Jekyll"
+git branch -M main
+git remote add origin username.github.io.git
+git push -u origin main
     </code></pre>
     Go to your GitHub repository settings, navigate to <b>Pages</b>, set the source branch to <code>main</code>, and save. GitHub Pages will build your site and publish it at <code>https://your-username.github.io</code>.
+
+
+    All information is sourced from Github Page documentation (<a href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site">https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site</a>) and Jekyll docs (<a href="https://jekyllrb.com/docs/">https://jekyllrb.com/docs/</a>)
 </div>

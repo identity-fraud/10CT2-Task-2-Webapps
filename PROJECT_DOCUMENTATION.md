@@ -2,6 +2,12 @@
 The website is hosted by Github Pages using Jekyll https://identity-fraud.github.io/10CT2-Task-2-Webapps
 
 run ``bundle exec jekyll serve`` with jekyll installed to run locally
+
+hidden things: 
+* the blog post search actually in fact does work
+* tags that appear at the top of posts are intended to immediately search the tag when clicked on (doesn't work)
+* 404 page used when in a nonexistant page
+* you may not have noticed but the highlight colour is set inversed (but manually) meaning changing themes also switches highlight theme
 ## Identifying and Defining
 Divergent Mindmaps on Excalidraw
 
@@ -71,3 +77,23 @@ This is why creating a blog containing truthful information is extremely influen
 
 ### Primary Research
 https://docs.google.com/forms/d/1iIZJgCSlY0kh8XR4F1NEqo187xSRtPMmYbJ4VKfFhIc/edit
+
+### UI/UX Design
+Homepage wireframe
+![homepage wireframe](images/wireframes-1.png)
+
+Blog page wireframe
+![blog page wireframe](images/wireframes-2.png)
+
+Blog post page wireframe
+![blog post page wireframe](images/wireframes-3.png)
+
+These are the finalised wireframes (though do not represent the actual final website) that I made after going through a few redesigns
+
+### Prototype
+I have a prototype at https://identity-fraud.github.io/10CT2-webapps/ which was from a previous repository I abandoned due to Jekyll breaking when I attempted to manually install it into the project. 
+
+![prototype image](images/prototype.png)
+
+## Producing and Implementing
+The documenting part starts now (20/09 12:42 AM). In the beginning, I already decided I will not be using Flask as Github Pages does not support it due to being a static server provider. I was considering between using Astro or Jekyll as the site generator and decided on Jekyll due to it being built into Github Pages as an action.  This means I will be using Javascript for "backend" which will not be easy as I have not learnt it yet. I took many ideas from my earlier websites such as the typical navigation header and footer.
